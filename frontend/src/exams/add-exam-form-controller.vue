@@ -201,6 +201,11 @@
             messages['exam_name'] = 'Maximum Field Length Exceeded'
             return
           }
+          if (key === 'expiry_date' && isNaN(answer)){
+            valid[key] = false
+            messages[key] = 'Invalid Date'
+            return
+          }
           if (key === 'office_id' && answer == null) {
             valid[key] = false
             messages[key] = 'Invalid Office'

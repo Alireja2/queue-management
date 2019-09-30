@@ -241,7 +241,7 @@
             let d = new Date()
             let today = moment(d).format('YYYY-MM-DD')
             this.captureExamDetail({ key: 'exam_received_date', value: today })
-            let recd = moment().add(90, 'd')
+            let recd = moment(null)
             this.captureExamDetail({ key: 'expiry_date', value: recd })
             return
           case 'group':
